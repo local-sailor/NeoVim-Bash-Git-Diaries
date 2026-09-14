@@ -534,6 +534,8 @@ $                   to takes the highlight to the other side
 type </b>
 esc
 
+
+
 ```
 ### VIM Visual Multi
 
@@ -642,7 +644,8 @@ so session.vim          so = source
 
  Run nvim -S            #saved layout
 
-
+    Same command again for off
+:MarkdownPDF
 Close current tab:tabclose or :tabe
 
 tabnext or tqbn         gt
@@ -663,12 +666,11 @@ Ctrl + w then T      Move current window to new tab
 
 
 
-## NVIM Custom Commands
+### NVIM Custom Commands
 
 
 ```vim
 Space f d   Teslecope lists all the flagged code (great for coding/debugging)
-
 Space f f    Telescope: find files
 Space f g    Telescope: live grep
 Space f b    Telescope: buffers
@@ -684,6 +686,24 @@ Space a      Aerial | Areial is like NeoTree but shows Chapter Contents, Functio
              ]]
              [h
              ]h
+
+    TYPST
+Space t p       to render and preview in browser
+Space t r       to reset
+
+
+    Plugin:MarkdownRender Commands
+:RenderMarkdown preview
+:RenderMarkdown enable
+:RenderMarkdown disable
+:RenderMarkdown toggle
+    type again to turn off
+:RenderMarkdown preview       
+:MarkdownPDF
+    Custom commands: Markdown
+MarkdownLock
+    space m l 
+
 
 K            LSP hover
 gd           go to definition
@@ -711,7 +731,7 @@ space c esc                                     Macro clears frozen images in nv
 ### NVIM  Favorites Dashboard (custom)
 
 ```text
-I have a custom local NVIM plugin that sets favorite files or folders
+I have  custom/local NVIM plugin that sets favorite files or folders
 and sets them in the nvim snacks dashboard. The files or folders are acessible with:
                     
                         option + 1...9
