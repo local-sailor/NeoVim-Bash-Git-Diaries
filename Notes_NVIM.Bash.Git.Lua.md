@@ -711,7 +711,7 @@ space c esc                                     Macro clears frozen images in nv
 ### NVIM  Favorites Dashboard (custom)
 
 ```text
-I prompted AI to make a local NVIM plugin that sets favorite files or folders
+I have a custom local NVIM plugin that sets favorite files or folders
 and sets them in the nvim snacks dashboard. The files or folders are acessible with:
                     
                         option + 1...9
