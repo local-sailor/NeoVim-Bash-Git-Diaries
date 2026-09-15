@@ -331,6 +331,12 @@ v i B
 
 c i b or B              deletes everything within the paranthesis  
 
+            "NVIM Suspendend Animation`"
+Ctrl-z                      Will close NVIM and keep it alive in the background
+                            this allows you to use the terminal
+:fg                         When you are ready to return to nvim 
+
+
 
 
 =G              To fix indentation inedentation from the cursor down. gg to get to the top of the file and fix the whole file.
@@ -1124,6 +1130,68 @@ git pull origin main --allow-unrelated-histories
 #Fix any conflicts if they arise, then push. 
 You can change main origin main to anything.
 git push -u origin main
+
+
+```
+
+### ISSUE: You want to keep a live repo just incase but you also have a completely different build you want to push
+
+```text
+You noticed your repo is suddenly very different, there are now new files and some of the system has been changed. 
+
+You're worried that they might be important but you also need to get this new and  completely different version live.
+
+How can you save the current repo?
+```   
+
+
+```vim
+One way...
+
+You can make a new branch from your side. Who ever is the admin still has to approve it. 
+
+You must access this live repo in your terminal.
+
+Go to your local set up and use the terminal.
+
+
+
+
+Acess the latest changes from your remote directory
+git fetch origin
+
+
+Create a new backup branch to keep the strange files safe
+-b for branch setups the repo for a branch
+git checkout -b backup-old-files
+
+
+Push this current version of the repo into the back up branch you just made
+-u for upstram sets set up a link between the live repo and the new branch
+A tracker is set that will allow you to recreate this version if needed
+git push -u origin back-up-message
+
+
+Switch to your local version
+git checkout main
+
+Add and load up your new version
+git add .
+
+
+Commit your changes
+git commit -m "mesage"
+
+Push and make it live
+git push origin main
+
+
+git push                might sitll worik instead
+
+
+
+
+
 
 
 ```
