@@ -18,7 +18,7 @@ https://github.com/local-sailor/NeoVim-Bash-Git-Diaries
 
 ## Bash Commands
 
-```Bash
+```vim
 
         "Terminal CLI Input"
 Ctrl + A: Move the cursor to the very beginning of the line.
@@ -104,6 +104,10 @@ open .   #opens the folder or launches finder
 
 mv name1.md name2.md    #to rename a word       -i prompts for files deletions =n bands any file deltions
 mv file.md  location/newLocation/  #move a file same for moving folders
+cp -a directory/olderFolder/.  directory/newFolder          Copies all the files in old folder and pastes them into new folder
+                                                            -a  means to copy all files recursively preserve things like promotions, hidden files, symbolic links
+                                                            -R or -r   also copies everything recursively but doesn't include hidden files and doesn't preseve permissions
+                                                            .  the fulstop means to copy all the files in the oldFolder
 
 echo "Hello World"  #Print text to the screen
 echo "Hello World" > greeting.txt   #Create a file and write text to its
