@@ -91,7 +91,7 @@ Ctrl + R: Open a reverse history search. Type a few letters of an old command to
 
 Up / Down Arrows: Cycle through your recently used commands.
 
-!!: Re-run the exact last command you typed.
+!!: Re-run the exact last command you typed. a
 
 
 mkdir -p app/src/components             #Create nested/parent subdirectories
@@ -272,6 +272,11 @@ Delete an entire file
 dd
 dG:
 
+        Insert Mode
+Ctrl w to delete by word
+Ctrl u to delete from the cursor to the line
+ctrl t or d     indent and unindent the current line
+
             Yanking from Vim
 "+yy — Yanks the entire current line to your system clipboard
 "+y — Yanks the current visual selection to your system clipboard 
@@ -290,6 +295,10 @@ yy to yank a line
 ctrl+d one page window
 ctr+u one page up
 ctrl+w to delete by word
+
+ciw      deletes word you're currently on puts yu into inerts mode to type "change inner word"
+cw       delete the portion of the word from your course ot the end "change word"
+caw      deletes the word + the spaces around it and goes into insert mode "change around word"
 
 ` in oil to set you cd into your current oil folder
 
@@ -392,7 +401,7 @@ Ctrl + R: Open a reverse history search. Type a few letters of an old command to
 
 /Running a Python Server/
 Python3 server.py 8000         "Run a server at port 8000
-Python3 % 8000i
+Python3 % 8000
 
 /Node.js server
 npm run dev
@@ -1186,7 +1195,7 @@ Push and make it live
 git push origin main
 
 
-git push                might sitll worik instead
+git push                might sitll work instead
 
 
 
