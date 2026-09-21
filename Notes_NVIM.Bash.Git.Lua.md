@@ -340,11 +340,12 @@ ctrl+d one page window
 ctr+u one page up
 ctrl+w to delete by word
 
+    Swap c with y for yank, v for select, d for delete
 ciw      deletes word you're currently on puts yu into inerts mode to type "change inner word"
 cw       delete the portion of the word from your course ot the end "change word"
 caw      deletes the word + the spaces around it and goes into insert mode "change around word"
-cib      change insisde [ block brackets
-ciB      change insisde { curcle braces
+cib      change inside [ block brackets
+ciB      change inside { curcle braces
 ca(      change around paranthesis
 
 ` in oil to set you cd into your current oil folder
@@ -516,7 +517,7 @@ set ft=python               to set the file to python
 
 
 #Vim Macros
-Press "q"                       to be macro
+Press q                       to record macro
 Choose a register to store the macro eg "h"
 execute your macro your inputs and regex will be saved
 Use vim motions to execute your macro e.g:
