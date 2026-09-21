@@ -275,6 +275,31 @@ chown :new.groupname file.txt
 Change owner only
 chown new.username file.txt
 ```
+### Terminal Commands for development
+
+```vim
+
+    General
+/n  new line
+/t  tab
+\   to hande space in CD names
+    cd there\ is\ a\ space\ here/
+
+    Python
+ruff check .    #check for an linting errors, helps standardise code bases and keep diffs standard
+python3 -m pytest -v     #a common option for running python test files 
+                         -m  targets and runs an internal library module as a script "pytest" is the target
+                         -v  is not necessary but it makes the output of pytest more descriptie usually it's  ' . ' for pass and ' F ' for fail
+
+    in C
+int a = 42
+int b = 84
+printf("%i and %i", a, b); 
+#wil print the i for integers in chronological order
+
+
+```
+
 
 ## VIM and NVIM Commands
 
