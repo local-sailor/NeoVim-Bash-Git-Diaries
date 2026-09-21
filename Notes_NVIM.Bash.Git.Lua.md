@@ -20,14 +20,14 @@ https://github.com/local-sailor/NeoVim-Bash-Git-Diaries
 
 ```vim
 
-        "Terminal CLI Input"
+        "Terminal CLI Input
 Ctrl + A: Move the cursor to the very beginning of the line.
 Ctrl + E: Move the cursor to the very end of the line.
 Alt + B: Move backward one full word at a time.
 Alt + F: Move forward one full word at a time
 ctrl + B or F: to max one word at a time => Works in WezTerm
           
-          "Navigation"
+          "Navigation
 cd folder/      #move into a folder "current directory"
 cd ..           #move backwards out of a folder
 ls              #see all the files and folder
@@ -36,7 +36,7 @@ cd ~            #takes you to the home directory usually your user profile
 
 
 
-        "Mac OS Cli inputi"
+        "Mac OS Cli inputi
 Alt + left right    to move by words => Works in Warp and MacOs Terminal
                     note: Tmux on Warp was blocking this so i had to keymap it again. 
 Ctrl + L:           Clear the terminal screen without losing your place.
@@ -44,7 +44,7 @@ Ctrl + C:           Cancel or kill the currently running command to give you a c
 Ctrl + U:           Cut everything from the cursor backward to the start of the line.
 Ctrl + K:           Cut everything from the cursor forward to the end of the line.
 
-        "Vim Normal Mode"
+        "Vim Normal Mode
 Ctr U or D      Up or Down by a page
 enter           To go to the front of the next line
 W or E          Move forward by one word (Left or Right end)
@@ -157,6 +157,20 @@ cat file1.txt file2.txt > combined.txt #Merge multiple files into a brand new fi
 
 cat -n script.sh #View a file with line numbers
 
+#Usin Cat to type a whole script
+# use EOF so special characters like $ do not trigger th terminal
+cat > tests/test_helloworld.py <<'EOF'
+from helloworld import HelloWorld
+
+
+def test_message_is_stored():
+    assert HelloWorld().message == "Hello, World!"
+
+
+def test_say_hello_prints_message(capsys):
+    HelloWorld().say_hello()
+    assert capsys.readouterr().out == "Hello, World!\n"
+EOF
 
 ```
 
@@ -268,6 +282,7 @@ chown new.username file.txt
 ctrl + l        under oil file explorer to reset
 :!shell command         for quick shell commmands
 :terminal               to open a terminal within nvim
+g.                      in nvim oil to see hidden files
 
 u to undo
 ctrl + r to redo
@@ -303,6 +318,9 @@ ctrl+w to delete by word
 ciw      deletes word you're currently on puts yu into inerts mode to type "change inner word"
 cw       delete the portion of the word from your course ot the end "change word"
 caw      deletes the word + the spaces around it and goes into insert mode "change around word"
+cib      change insisde [ block brackets
+ciB      change insisde { curcle braces
+ca(      change around paranthesis
 
 ` in oil to set you cd into your current oil folder
 
@@ -742,6 +760,21 @@ shift esc    custom escape out of nvim terminal (must be in insert mode)
 space c esc                                     Macro clears frozen images in nvim buffer and then resets it.
                                                 Then it places the image reset command in the clipboard.
                                                 ':lua Snacks.image.buf.attach(0)'
+
+
+
+Custom Copyrigt Image Kill Switch
+Run once in terminal to load it
+source ~/.zshrc
+
+turn on
+terminal-visuals safe
+
+turn off
+terminal-visuals personal
+
+ls
+terminal-visuals status
 
 
 ```
