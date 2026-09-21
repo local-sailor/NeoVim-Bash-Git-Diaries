@@ -347,6 +347,16 @@ caw      deletes the word + the spaces around it and goes into insert mode "chan
 cib      change inside [ block braces
 ciB      change inside { curcy braces
 ca(      change around paranthesis
+    More Intuitive approach
+you can also use ci[ and ci{ instead of b and B
+ci[
+ci{
+ci<
+ci"
+ci<
+ci< 
+cip for paragraph!
+these work with ca as well
 
 ` in oil to set you cd into your current oil folder
 
