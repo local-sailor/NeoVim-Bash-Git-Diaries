@@ -344,8 +344,8 @@ ctrl+w to delete by word
 ciw      deletes word you're currently on puts yu into inerts mode to type "change inner word"
 cw       delete the portion of the word from your course ot the end "change word"
 caw      deletes the word + the spaces around it and goes into insert mode "change around word"
-cib      change inside [ block brackets
-ciB      change inside { curcle braces
+cib      change inside [ block braces
+ciB      change inside { curcy braces
 ca(      change around paranthesis
 
 ` in oil to set you cd into your current oil folder
