@@ -34,6 +34,9 @@ ls              #see all the files and folder
 pwd             #show you current location "working directorey"
 cd ~            #takes you to the home directory usually your user profile
 
+    Get PWD wth the spaces formatted with \
+printf '%q\n' "$PWD"                
+
 
 
         "Mac OS Cli inputi
@@ -525,6 +528,10 @@ gg%+yG          - gg takes you to the top, % all in the range, + add to (clipboa
 set ft? or set filetype?    to check filetype
 set ft=python               to set the file to python
 
+        Oil
+:Oil --preview          #to reset a buffer and see changes
+:w or :edit             #may also work
+gr                      #try gr too
 
 #Vim Macros
 Press q                       to record macro
@@ -539,7 +546,7 @@ type @h to quote the next line (normal mode, no colon :)
 5@h to quote the next 5 lines.
 
 :reg to see your recorded in register h or q
-put q   to see edit your macros saving in q
+put q   to see edit your macros saving in  
 qyy     to save your edited macro in regx form and save it to q again.
 :reg    should be visiable under the q  register.
 :put q  to type out the macro you recorded and random it in text.
@@ -596,9 +603,10 @@ if your variable is single letter like g this might be better
         "Add <b> </b> betweens lins of text"
 ctrl v              much like visual mode highlight but lets you do so in a square uniform shape
                     ideal for macros
-i                   for insert mde
+shift+I             to record something you can type within insert mde
 type <b>            
 esc                 esc will apply the macro
+After control v you could also use dd to delete the line before instead of using shift+i
 
 for the other side
 gv                  restores the previous highglight <REMEMBER>
@@ -739,7 +747,7 @@ Ctrl + w then T      Move current window to new tab
 
 
 
-### NVIM Custom Commands
+### NVIM Custom Commands / Plugins Related
 
 
 ```vim
@@ -775,7 +783,8 @@ Space t r       to reset
 :MarkdownPDF
     Custom commands: Markdown
 MarkdownLock
-    space m l 
+    space m l
+:set wrap       #to enforce window resize
 
 
 K            LSP hover
@@ -797,7 +806,11 @@ space c esc                                     Macro clears frozen images in nv
                                                 Then it places the image reset command in the clipboard.
                                                 ':lua Snacks.image.buf.attach(0)'
 
-
+    Github Copilot Ghostext (in NVIM)
+:Copilot setup
+Toggle it with :Copilot disable and :Copilot enable.
+Check connectivity with :Copilot status.
+Use Tab as usual
 
 Custom Copyrigt Image Kill Switch
 Run once in terminal to load it
@@ -1135,7 +1148,7 @@ touch .gitignore                                    To create .gitignore
 
 ls a 
 
-git clone <YOUR_REMOTE_REPOSITORY_URL>              Clone  a repo.
+git clone <YOUR_REMOTE_REPOSITORY_URL>                              Clone  a repo.
 
 Make a repo from your terminal
 gh auth login                                                       login to github  ("brew install gh" if not instally)
@@ -1151,6 +1164,29 @@ git add .
 git commit -m "Fix merge conflict"
 git push -u origin main
 
+
+    General
+Show the files in the remote
+git ls-tree origin/main --name-only
+git fetch       #updates information about the remote repo
+git pull = git fetch + merge 
+
+  New branch with new history
+git switch --orphan main2 
+then to you can rename to main again: git branch -M main
+
+  Removing files from remote
+git rm -r -- folder1/ folder2/ folder3
+--          say it's a path other wise you can quotations which is also useful
+--cached    this flag is to remove only from the remote repo not your local
+rm -r       standard way to delete things in terminals -r or -R is save_current_session
+if you have spaces and want to delete from the remote
+git rm -r --cached "folder 1/ folder 2/ folder 3/"
+git rm -r --cached "folder 1/" "folder 2/" "folder 3/"
+git rm -r --cached \
+folder1 \
+folder 2 \
+folder 3 \
 
 
 ```
@@ -1269,11 +1305,5 @@ git push origin main
 
 
 git push                might sitll work instead
-
-
-
-
-
-
 
 ```
