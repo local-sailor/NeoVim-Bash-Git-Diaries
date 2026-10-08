@@ -315,9 +315,13 @@ g.                      in nvim oil to see hidden files
 u to undo
 ctrl + r to redo
 
+
+g .         to show hidden files for git
+
 Delete an entire file
 dd
 dG:
+
 
         Insert Mode
 Ctrl w to delete by word
@@ -532,6 +536,11 @@ set ft=python               to set the file to python
 :Oil --preview          #to reset a buffer and see changes
 :w or :edit             #may also work
 gr                      #try gr too
+
+    Telescope 
+:Telescope current_buffer_fuzzy_find
+space f c       fuzzy find
+space f r       custom command retrieve previous fuzzfind 
 
 #Vim Macros
 Press q                       to record macro
@@ -756,6 +765,10 @@ Space f f    Telescope: find files
 Space f g    Telescope: live grep
 Space f b    Telescope: buffers
 Space f h    Telescope: help
+Space f c       fuzzy find
+Space f r       custom command retrieve previous fuzzfind 
+:Telescope current_buffer_fuzzy_find
+
 
 Space e      Oil file explorer | A fast nvim file explorer, you can use 
              VIM insert mode to make and delete files (:q to save) 
@@ -767,6 +780,11 @@ Space a      Aerial | Areial is like NeoTree but shows Chapter Contents, Functio
              ]]
              [h
              ]h
+
+             oil
+g .         to show hidden files for git 
+            NeoTree
+shift h     to show hidden files for git
 
     TYPST
 Space t p       to render and preview in browser
@@ -1144,6 +1162,7 @@ git remote -v                                       Shows the github link(or oth
 
 touch .gitignore                                    To create .gitignore
 
+git pull origin main --rebase                       This provides a way to pull from the repo missing fies in your local copy without overwriting your new changes.
 
 
 ls a 
