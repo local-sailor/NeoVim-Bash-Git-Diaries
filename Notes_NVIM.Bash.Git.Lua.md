@@ -790,6 +790,7 @@ shift h     to show hidden files for git
     TYPST
 Space t p       to render and preview in browser
 Space t r       to reset
+typst compile document.typ
 
 
     Plugin:MarkdownRender Commands
