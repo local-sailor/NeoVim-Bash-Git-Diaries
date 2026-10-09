@@ -1,3 +1,4 @@
+##  Some Notes
 
 ```bash
 #Nvim config File
