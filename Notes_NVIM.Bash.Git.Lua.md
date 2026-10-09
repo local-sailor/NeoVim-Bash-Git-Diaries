@@ -1,3 +1,15 @@
+##  Some Notes
+
+```bash
+#Nvim config File
+nvim ~/.config/nvim/init.lua
+:reset #to reload
+
+#To open the Tmux Confuguration
+nvim ~/.tmux.conf
+
+#to reload
+tmux source-file ~/.tmux.conf
 
 https://github.com/local-sailor/NeoVim-Bash-Git-Diaries
 ```
