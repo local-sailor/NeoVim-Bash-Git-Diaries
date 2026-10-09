@@ -1,15 +1,3 @@
-##  Some Notes
-
-```bash
-#Nvim config File
-nvim ~/.config/nvim/init.lua
-:reset #to reload
-
-#To open the Tmux Confuguration
-nvim ~/.tmux.conf
-
-#to reload
-tmux source-file ~/.tmux.conf
 
 https://github.com/local-sailor/NeoVim-Bash-Git-Diaries
 ```
@@ -1176,6 +1164,15 @@ gh auth login                                                       login to git
 gh repo create <YOUR_REPO_NAME> --public --source=. --remote=origin --push          # Create a remote repo and push your local files automatically
 
 
+To Hide Icons: Open Terminal and paste the following, then press Enter:
+defaults write com.apple.finder CreateDesktop false; killall Finder
+
+
+To Bring Icons Back: Open Terminal and paste this command:
+defaults write com.apple.finder CreateDesktop true; killall Finder
+
+
+
 What if there is already files in your repo and you code base don't match
 git remote add origin <PASTE_YOUR_REPO_LINK_HERE>
 git pull origin main --allow-unrelated-histories
@@ -1252,6 +1249,38 @@ git init -b main                                   Intiative .gitinit and sets t
 
 ```
 
+### Working with someone else's Fork
+
+```vim
+
+1. Clone Your Fork
+# Clone your specific fork (replace with your username and repo name)
+git clone https://github.com
+
+# Move into the project directory
+cd FORKED_REPO_NAME
+
+
+2. Set Up the Original Repository (Optional, step 3 works without it)
+# Link to your friend's original repo
+git remote add upstream https://github.com
+
+# Verify your remotes (you should see 'origin' pointing to your fork and 'upstream' to theirs)
+git remote -v
+
+
+
+3. Test the Pipeline
+
+git checkout -b test-pipeline
+git commit --allow-empty -m "Testing CI pipeline"
+git push origin test-pipeline
+
+
+```
+
+
+
 ### ISSUE: fresh repo has a file already
 
 ```vim
@@ -1326,3 +1355,4 @@ git push origin main
 git push                might sitll work instead
 
 ```
+:
