@@ -1,4 +1,3 @@
-##  Some Notes
 
 ```bash
 #Nvim config File
@@ -317,6 +316,7 @@ ctrl + r to redo
 
 
 g .         to show hidden files for git
+shift h     in neotree to show hidden file
 
 Delete an entire file
 dd
