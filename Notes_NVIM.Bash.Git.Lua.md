@@ -37,6 +37,13 @@ cd ~            #takes you to the home directory usually your user profile
     Get PWD wth the spaces formatted with \
 printf '%q\n' "$PWD"                
 
+   Mac inbuilt terminal Command (Hide/Unhide desktop icons)
+To Hide Icons: Open Terminal and paste the following, then press Enter:
+defaults write com.apple.finder CreateDesktop false; killall Finder
+
+
+To Bring Icons Back: Open Terminal and paste this command:
+defaults write com.apple.finder CreateDesktop true; killall Finder
 
 
         "Mac OS Cli inputi
@@ -57,7 +64,7 @@ Shift + A       Type/Inser at back of the front of the line
 Shift + I       Type/Insert at the front of the line:
 *               To target a word, "n" to move its next instance prev "shift n", ":noh" to clear it
 /"word"         To search for a word, "n" to move through the instance       
-gc              To in visual "visual mode" to comment out a passage
+gc              To go in visual "visual mode" to comment out a passage
 gg G            To get to the top of the document G to the end
 dGG dgg         To cut everything from here to the bottom  from here to the 
 %+y             Yank what you just delete
@@ -123,7 +130,7 @@ ls              #see all the files and folder
 pwd             #show you current location "working directorey"
 cd ~            #takes you to the home directory usually your user profile
 
-#Deleting
+    #Deleting
 -r or -R (Recursive): Deletes a directory and all of its contents (files, subfolders, hidden files). Required to delete folders with rm.
 -f (Force): Ignores nonexistent files and prompts, deleting everything silently without asking for permission.
 -i (Interactive): Prompts you for confirmation before deleting every single file. Excellent for safety.
@@ -737,9 +744,11 @@ so session.vim          so = source
 
     Same command again for off
 :MarkdownPDF
+
+
 Close current tab:tabclose or :tabe
 
-tabnext or tqbn         gt
+tabnext or tabn         gt
 
 tabprevious or tabp      gT
 
@@ -832,7 +841,17 @@ Toggle it with :Copilot disable and :Copilot enable.
 Check connectivity with :Copilot status.
 Use Tab as usual
 
-Custom Copyrigt Image Kill Switch
+    Mac inbuilt terminal Command (Hide/Unhide desktop icons)
+To Hide Icons: Open Terminal and paste the following, then press Enter:
+defaults write com.apple.finder CreateDesktop false; killall Finder
+
+
+To Bring Icons Back: Open Terminal and paste this command:
+defaults write com.apple.finder CreateDesktop true; killall Finder
+
+
+
+    Custom Copyrigt Image Kill Switch
 Run once in terminal to load it
 source ~/.zshrc
 
@@ -851,7 +870,7 @@ terminal-visuals status
 
 ### NVIM  Favorites Dashboard (custom)
 
-```text
+```vim
 I have  custom/local NVIM plugin that sets favorite files or folders
 and sets them in the nvim snacks dashboard. The files or folders are acessible with:
                     
@@ -1177,13 +1196,6 @@ gh auth login                                                       login to git
 
 gh repo create <YOUR_REPO_NAME> --public --source=. --remote=origin --push          # Create a remote repo and push your local files automatically
 
-
-To Hide Icons: Open Terminal and paste the following, then press Enter:
-defaults write com.apple.finder CreateDesktop false; killall Finder
-
-
-To Bring Icons Back: Open Terminal and paste this command:
-defaults write com.apple.finder CreateDesktop true; killall Finder
 
 
 
